@@ -1,0 +1,15 @@
+/* Responsive tweaks */
+@media(max-width:600px){
+  .product-grid{grid-template-columns:1fr}
+  .nav-inner{padding:.6rem}
+}
+
+@media(max-width:480px){
+  .product-card img{max-height:220px}
+  .hero-collage{height:28vh}
+}
+
+@media(max-width:320px){
+  .hero-collage{height:22vh}
+  .nav-inner .title{font-size:.95rem}
+}

@@ -1,0 +1,49 @@
+// Dummy product data
+const products = [
+  {id:'1',name:'7 Cups Sweet',price:320,image:'assets/images/7 cups.png',description:'Traditional Andhra sweet made with milk, sugar and nuts.',ingredients:'Milk, Sugar, Ghee, Nuts',rating:4.8,category:'Sweets'},
+  {id:'2',name:'Mango Pickle',price:250,image:'assets/images/mango pickle.png',description:'Tangy mango pickle with authentic spices.',ingredients:'Mangoes, Salt, Chili, Mustard',rating:4.6,category:'Pickles'},
+  {id:'3',name:'Karam Podi',price:180,image:'assets/images/kaaram podi.png',description:'Spicy gun powder, perfect with hot rice.',ingredients:'Chilies, Lentils, Spices',rating:4.7,category:'Powders'},
+  {id:'4',name:'Murukulu',price:220,image:'assets/images/murkulu.png',description:'Crispy savory snack traditional to Andhra.',ingredients:'Rice Flour, Spices',rating:4.5,category:'Snacks'},
+  {id:'5',name:'Chekkalu',price:240,image:'assets/images/mur.png',description:'Crunchy chekkalu made in small batches.',ingredients:'Rice Flour, Gram Flour, Spices',rating:4.4,category:'Snacks'},
+  {id:'6',name:'Boondi Laddu',price:300,image:'assets/images/laddoo.png',description:'Sweet boondi laddu prepared in ghee.',ingredients:'Boondi, Sugar, Ghee',rating:4.9,category:'Sweets'},
+  {id:'7',name:'Gutti Vankaya Pickle',price:260,image:'assets/images/gvp.png',description:'Small brinjal pickle with home spices.',ingredients:'Brinjals, Oil, Spices',rating:4.6,category:'Pickles'},
+  {id:'8',name:'Pootharekulu',price:340,image:'assets/images/pootha.png',description:'Delicate rice-paper sweet filled with jaggery.',ingredients:'Rice, Jaggery, Ghee',rating:4.7,category:'Sweets'},
+  {id:'9',name:'Pappu Charu Mix',price:150,image:'assets/images/pcm.png',description:'Lentil stew masala for quick pappu charu.',ingredients:'Tamarind, Spices, Lentils',rating:4.5,category:'Powders'},
+  {id:'10',name:'Ribbon Pakoda',price:200,image:'assets/images/mur.png',description:'Crispy ribbon-style savory snack.',ingredients:'Gram Flour, Rice Flour, Spices',rating:4.4,category:'Snacks'},
+  {id:'11',name:'Nuvvula Undrallu',price:280,image:'assets/images/nuvvula.png',description:'Sweet sesame balls made with jaggery.',ingredients:'Sesame, Jaggery',rating:4.8,category:'Sweets'},
+  {id:'12',name:'Gongura Pickle',price:230,image:'assets/images/g-pickle.png',description:'Tart gongura pickle full of Andhra flavor.',ingredients:'Gongura, Chili, Oil',rating:4.6,category:'Pickles'},
+  {id:'13',name:'Idli Podi',price:170,image:'assets/images/idli-k-p.png',description:'Spiced powder for idli and dosa.',ingredients:'Lentils, Chilies, Spices',rating:4.7,category:'Powders'},
+  {id:'14',name:'Boorelu',price:300,image:'assets/images/boorelu.png',description:'Sweet stuffed lentil dumplings fried in ghee.',ingredients:'Lentils, Jaggery, Rice Flour',rating:4.9,category:'Sweets'},
+  {id:'15',name:'Chakli',price:210,image:'assets/images/mur.png',description:'Savory spiral snack, crunchy and seasoned.',ingredients:'Rice, Chickpea Flour, Spices',rating:4.5,category:'Snacks'},
+  {id:'16',name:'Avakaya Special',price:270,image:'assets/images/avakaya.png',description:'Signature Andhra mango pickle, properly aged.',ingredients:'Raw Mangoes, Mustard, Chilies',rating:4.8,category:'Pickles'},
+  {id:'17',name:'Podi Gift Pack',price:350,image:'assets/images/kaaram podi.png',description:'Assorted podis in a premium gift pack.',ingredients:'Various Spices',rating:4.7,category:'Powders'},
+  {id:'18',name:'Sweet Box (Assorted)',price:480,image:'assets/images/7 cups.png',description:'Assorted sweets for gifting and festivals.',ingredients:'Assorted',rating:4.9,category:'Sweets'},
+  {id:'19',name:'Masala Murukulu',price:230,image:'assets/images/masala-mur.png',description:'Spiced murukulu with a crunchy bite.',ingredients:'Rice Flour, Spices',rating:4.6,category:'Snacks'},
+  {id:'20',name:'Tomato pickle',price:520,image:'assets/images/tomato-pickle.png',description:'Tomato, salt, chilli.',ingredients:'Various',rating:4.9,category:'pickle'}
+];
+
+function renderFeatured(){
+  const grid = document.getElementById('featured-grid');
+  if(!grid) return;
+  grid.innerHTML='';
+  products.slice(0,4).forEach(p=>{
+    const card = document.createElement('article'); card.className='product-card';
+    card.innerHTML = `<img src="${p.image}" alt="${p.name}" loading="lazy" decoding="async"><div class="product-body"><h3>${p.name}</h3><p class="price">₹${p.price}/kg</p><p>${p.description}</p><div class="product-actions"><a class="btn" href="product-details.html?id=${p.id}">View Details</a></div></div>`;
+    grid.appendChild(card);
+  });
+}
+
+function renderProducts(listElId='product-list'){
+  const grid = document.getElementById(listElId); if(!grid) return;
+  grid.innerHTML='';
+  products.forEach(p=>{
+    const card = document.createElement('article'); card.className='product-card';
+    card.innerHTML = `<img src="${p.image}" alt="${p.name}" loading="lazy" decoding="async"><div class="product-body"><h3>${p.name}</h3><p class="price">₹${p.price}/kg</p><p>${p.description}</p><div class="product-actions"><button class="btn add" data-id="${p.id}">Add</button><a class="btn" href="product-details.html?id=${p.id}">Details</a></div></div>`;
+    grid.appendChild(card);
+  });
+}
+
+document.addEventListener('DOMContentLoaded',()=>{ renderFeatured(); renderProducts();
+  // restore search query if present
+  const q = localStorage.getItem('lastSearch'); if(q){ const box=document.getElementById('searchBox'); if(box) box.value=q; localStorage.removeItem('lastSearch'); }
+});

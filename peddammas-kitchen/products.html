@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Menu — Peddamma’s Kitchen</title>
+  <meta name="description" content="Browse sweets, snacks, pickles and powders from Peddamma's Kitchen." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/navbar.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+  <meta name="theme-color" content="#FFF8F0">
+</head>
+<body>
+  <div id="nav-placeholder"></div>
+  <main class="container products-page">
+    <h1>Order Food</h1>
+    <div class="search-row">
+      <div class="search-container">
+        <input id="searchBox" placeholder="Search products, categories or descriptions" aria-label="Search products" />
+        <button class="search-cta">Search</button>
+      </div>
+    </div>
+    <div class="product-grid" id="product-list"></div>
+    <div class="cart-summary" id="cartSummary"></div>
+  </main>
+  <div id="footer-placeholder"></div>
+  <script src="js/products.js"></script>
+  <script src="js/search.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

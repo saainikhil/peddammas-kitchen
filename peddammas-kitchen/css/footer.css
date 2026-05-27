@@ -1,0 +1,5 @@
+.site-footer{background:#fff7f3;padding:2rem 0;color:#4b3a36}
+.footer-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
+.footer-bottom{display:flex;justify-content:space-between;padding-top:1rem;border-top:1px solid rgba(0,0,0,.04);font-size:.9rem}
+@media(max-width:800px){.footer-grid{grid-template-columns:1fr 1fr}.footer-bottom{flex-direction:column;gap:.5rem}}
+@media(max-width:480px){.footer-grid{grid-template-columns:1fr}.site-footer{padding:1rem}.footer-bottom{font-size:.95rem}}
