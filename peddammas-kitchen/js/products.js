@@ -1,6 +1,6 @@
 // Dummy product data
 const products = [
-  {id:'1',name:'7 Cups Sweet',price:320,image:'assets/images/7 cups.png',description:'Traditional Andhra sweet made with milk, sugar and nuts.',ingredients:'Milk, Sugar, Ghee, Nuts',rating:4.8,category:'Sweets'},
+  {id:'1',name:'7 Cups Sweet',price:1800,image:'assets/images/7 cups.png',description:'Traditional Andhra sweet made with milk, sugar and nuts.',ingredients:'Milk, Sugar, Ghee, Nuts',rating:4.8,category:'Sweets'},
   {id:'2',name:'Mango Pickle',price:250,image:'assets/images/mango pickle.png',description:'Tangy mango pickle with authentic spices.',ingredients:'Mangoes, Salt, Chili, Mustard',rating:4.6,category:'Pickles'},
   {id:'3',name:'Karam Podi',price:180,image:'assets/images/kaaram podi.png',description:'Spicy gun powder, perfect with hot rice.',ingredients:'Chilies, Lentils, Spices',rating:4.7,category:'Powders'},
   {id:'4',name:'Murukulu',price:220,image:'assets/images/murkulu.png',description:'Crispy savory snack traditional to Andhra.',ingredients:'Rice Flour, Spices',rating:4.5,category:'Snacks'},
