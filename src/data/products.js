@@ -1,5 +1,4 @@
-// Dummy product data
-const products = [
+export const products = [
   {id:'1',name:'7 Cups Sweet',price:1800,image:'assets/images/7 cups.png',description:'Traditional Andhra sweet made with milk, sugar and nuts.',ingredients:'Milk, Sugar, Ghee, Nuts',rating:4.8,category:'Sweets'},
   {id:'2',name:'Mango Pickle',price:250,image:'assets/images/mango pickle.png',description:'Tangy mango pickle with authentic spices.',ingredients:'Mangoes, Salt, Chili, Mustard',rating:4.6,category:'Pickles'},
   {id:'3',name:'Karam Podi',price:180,image:'assets/images/kaaram podi.png',description:'Spicy gun powder, perfect with hot rice.',ingredients:'Chilies, Lentils, Spices',rating:4.7,category:'Powders'},
@@ -19,31 +18,5 @@ const products = [
   {id:'17',name:'Podi Gift Pack',price:350,image:'assets/images/kaaram podi.png',description:'Assorted podis in a premium gift pack.',ingredients:'Various Spices',rating:4.7,category:'Powders'},
   {id:'18',name:'Sweet Box (Assorted)',price:480,image:'assets/images/7 cups.png',description:'Assorted sweets for gifting and festivals.',ingredients:'Assorted',rating:4.9,category:'Sweets'},
   {id:'19',name:'Masala Murukulu',price:230,image:'assets/images/masala-mur.png',description:'Spiced murukulu with a crunchy bite.',ingredients:'Rice Flour, Spices',rating:4.6,category:'Snacks'},
-  {id:'20',name:'Tomato pickle',price:520,image:'assets/images/tomato-pickle.png',description:'Tomato, salt, chilli.',ingredients:'Various',rating:4.9,category:'pickle'}
+  {id:'20',name:'Tomato pickle',price:520,image:'assets/images/tomato-pickle.png',description:'Tomato, salt, chilli.',ingredients:'Various',rating:4.9,category:'Pickles'}
 ];
-
-function renderFeatured(){
-  const grid = document.getElementById('featured-grid');
-  if(!grid) return;
-  grid.innerHTML='';
-  products.slice(0,4).forEach(p=>{
-    const card = document.createElement('article'); card.className='product-card';
-    card.innerHTML = `<img src="${p.image}" alt="${p.name}" loading="lazy" decoding="async"><div class="product-body"><h3>${p.name}</h3><p class="price">₹${p.price}/kg</p><p>${p.description}</p><div class="product-actions"><a class="btn" href="product-details.html?id=${p.id}">View Details</a></div></div>`;
-    grid.appendChild(card);
-  });
-}
-
-function renderProducts(listElId='product-list'){
-  const grid = document.getElementById(listElId); if(!grid) return;
-  grid.innerHTML='';
-  products.forEach(p=>{
-    const card = document.createElement('article'); card.className='product-card';
-    card.innerHTML = `<img src="${p.image}" alt="${p.name}" loading="lazy" decoding="async"><div class="product-body"><h3>${p.name}</h3><p class="price">₹${p.price}/kg</p><p>${p.description}</p><div class="product-actions"><button class="btn add" data-id="${p.id}">Add</button><a class="btn" href="product-details.html?id=${p.id}">Details</a></div></div>`;
-    grid.appendChild(card);
-  });
-}
-
-document.addEventListener('DOMContentLoaded',()=>{ renderFeatured(); renderProducts();
-  // restore search query if present
-  const q = localStorage.getItem('lastSearch'); if(q){ const box=document.getElementById('searchBox'); if(box) box.value=q; localStorage.removeItem('lastSearch'); }
-});
