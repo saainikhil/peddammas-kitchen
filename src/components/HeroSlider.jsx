@@ -7,28 +7,28 @@ const SLIDE_DATA = [
     name: '7 Cups Sweet',
     desc: 'Rich, milky and nostalgic — made traditionally.',
     price: '₹320 / kg',
-    image: 'assets/images/7 cups.png'
+    image: '/assets/images/7 cups.png'
   },
   {
     id: '2',
     name: 'Mango Pickle',
     desc: 'Tangy and spicy, bottled with care.',
     price: '₹250 / kg',
-    image: 'assets/images/mango pickle.png'
+    image: '/assets/images/mango pickle.png'
   },
   {
     id: '4',
     name: 'Murukulu',
     desc: 'Crispy savory bites made fresh.',
     price: '₹220 / kg',
-    image: 'assets/images/murkulu.png'
+    image: '/assets/images/murkulu.png'
   },
   {
     id: '3',
     name: 'Karam Podi',
     desc: 'Spicy gun powder for rice and roti.',
     price: '₹180 / kg',
-    image: 'assets/images/kaaram podi.png'
+    image: '/assets/images/kaaram podi.png'
   }
 ];
 

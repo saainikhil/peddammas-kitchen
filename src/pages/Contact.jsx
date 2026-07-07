@@ -32,10 +32,10 @@ const Contact = () => {
           <aside className="info-card">
             <h3 style={{ marginTop: 0 }}>Reach Us</h3>
             <p style={{ margin: '.25rem 0' }}>
-              Phone: <a href="tel:+918886880507" style={{ color: 'inherit', textDecoration: 'none', fontWeight: 600 }}>+91 88868 80507</a>
+              Phone: <a href="tel:+919876543210" style={{ color: 'inherit', textDecoration: 'none', fontWeight: 600 }}>+91 98765 43210</a>
             </p>
             <p style={{ margin: '.25rem 0' }}>
-              WhatsApp: <a href="https://wa.me/918886880507" target="_blank" rel="noreferrer" style={{ color: 'inherit', textDecoration: 'none', fontWeight: 600 }}>Chat on WhatsApp</a>
+              WhatsApp: <a href="https://wa.me/919876543210" target="_blank" rel="noreferrer" style={{ color: 'inherit', textDecoration: 'none', fontWeight: 600 }}>Chat on WhatsApp</a>
             </p>
             <p style={{ margin: '.25rem 0' }}>
               Email: <a href="mailto:info@peddammaskitchen.com" style={{ color: 'inherit', textDecoration: 'none', fontWeight: 600 }}>info@peddammaskitchen.com</a>
@@ -50,10 +50,10 @@ const Contact = () => {
             </p>
             
             <div style={{ marginTop: '1.2rem', display: 'flex', gap: '.6rem' }}>
-              <a href="#" style={{ display: 'inline-block', padding: '.5rem 1rem', borderRadius: '8px', background: 'var(--maroon)', color: '#fff', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600 }}>
+              <a href="https://www.instagram.com/peddammaskitchen" target="_blank" rel="noreferrer" style={{ display: 'inline-block', padding: '.5rem 1rem', borderRadius: '8px', background: 'var(--maroon)', color: '#fff', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600 }}>
                 Instagram
               </a>
-              <a href="https://wa.me/918886880507" target="_blank" rel="noreferrer" style={{ display: 'inline-block', padding: '.5rem 1rem', borderRadius: '8px', background: '#25D366', color: '#fff', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600 }}>
+              <a href="https://wa.me/919876543210" target="_blank" rel="noreferrer" style={{ display: 'inline-block', padding: '.5rem 1rem', borderRadius: '8px', background: '#25D366', color: '#fff', textDecoration: 'none', fontSize: '0.9rem', fontWeight: 600 }}>
                 WhatsApp
               </a>
             </div>

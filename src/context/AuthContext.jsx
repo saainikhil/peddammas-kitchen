@@ -1,4 +1,4 @@
-import React, { createContext, useState, useContext, useEffect } from 'react';
+import React, { createContext, useState, useContext } from 'react';
 
 const AuthContext = createContext(null);
 
@@ -8,6 +8,9 @@ const VALID_CREDENTIALS = {
   'demo': 'test123',
   'admin': 'test123'
 };
+
+const isValidUsername = (value) => typeof value === 'string' && value.trim().length >= 3;
+const isValidPassword = (value) => typeof value === 'string' && value.length >= 4;
 
 export const AuthProvider = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(() => {
@@ -19,6 +22,13 @@ export const AuthProvider = ({ children }) => {
 
   const login = (user, pass) => {
     const trimmedUser = user.trim();
+    if (!isValidUsername(trimmedUser)) {
+      return { success: false, message: 'Username must be at least 3 characters' };
+    }
+    if (!isValidPassword(pass)) {
+      return { success: false, message: 'Password must be at least 4 characters' };
+    }
+
     if (VALID_CREDENTIALS[trimmedUser] && VALID_CREDENTIALS[trimmedUser] === pass) {
       localStorage.setItem('pk_logged_in', 'true');
       localStorage.setItem('pk_username', trimmedUser);
@@ -26,6 +36,7 @@ export const AuthProvider = ({ children }) => {
       setUsername(trimmedUser);
       return { success: true };
     }
+
     return { success: false, message: 'Invalid username or password' };
   };
 

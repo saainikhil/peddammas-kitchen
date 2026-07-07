@@ -28,7 +28,7 @@ const BulkOrders = () => {
           <a className="btn primary" href="#bulk-form" onClick={handleScrollToForm}>Request Quote</a>
         </div>
         <div className="hero-image">
-          <img src="assets/images/about us.png" alt="Bulk catering by Peddamma's Kitchen" loading="lazy" decoding="async" />
+          <img src="/assets/images/about us.png" alt="Bulk catering by Peddamma's Kitchen" loading="lazy" decoding="async" />
         </div>
       </section>
 
@@ -85,7 +85,7 @@ const BulkOrders = () => {
             <li>Timely delivery & on-site setup (where required)</li>
           </ul>
           <p style={{ marginTop: '1.2rem' }}>
-            <strong>Phone:</strong> <a href="tel:+918886880507" style={{ color: 'var(--maroon)' }}>+91 88868 80507</a>
+            <strong>Phone:</strong> <a href="tel:+919876543210" style={{ color: 'var(--maroon)' }}>+91 98765 43210</a>
           </p>
           <p style={{ marginTop: '0.5rem' }}>
             <strong>Email:</strong> <a href="mailto:info@peddammaskitchen.com" style={{ color: 'var(--maroon)' }}>info@peddammaskitchen.com</a>

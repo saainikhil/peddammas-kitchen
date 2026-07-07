@@ -8,6 +8,7 @@ import './styles/navbar.css';
 import './styles/footer.css';
 import './styles/slider.css';
 import './styles/responsive.css';
+import './styles/products.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>

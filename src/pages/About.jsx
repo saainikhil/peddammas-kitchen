@@ -13,7 +13,7 @@ const About = () => {
       <section className="story">
         <div className="flex" style={{ display: 'flex', gap: '2rem', alignItems: 'center', flexWrap: 'wrap' }}>
           <div className="story-img">
-            <img src="assets/images/about us.png" alt="Peddamma cooking" loading="lazy" decoding="async" />
+            <img src="/assets/images/about us.png" alt="Peddamma cooking" loading="lazy" decoding="async" />
           </div>
           <div className="story-text" style={{ flex: 1, minWidth: '300px' }}>
             <h2>Tradition & Love</h2>
